@@ -1,5 +1,5 @@
 package com.ms.product.config;
-
+//esse arquivo é destinado a configuracao do banco de dados na aplicação
 
 import java.util.Properties;
 

@@ -12,8 +12,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.ms.product.model.Product;
 import com.ms.product.service.ProductService;
@@ -22,6 +25,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import org.springframework.http.MediaType;
 
 @RestController
 @RequestMapping("product")
@@ -46,32 +50,6 @@ public class ProductController {
 	    return  ResponseEntity.status(HttpStatus.OK).body(productService.getProducts());
 	}
 	
-	@PostMapping( consumes = "application/json", produces = "application/json")
-	@ApiOperation(value = "Save Product")
-	@ApiResponses(value = {
-		    @ApiResponse(responseCode = "200", description = "Comando realizado com sucesso."),
-		    @ApiResponse(responseCode = "400", description = "Ocorreu um erro ao ..."),
-		})
-	public ResponseEntity<Product> saveProduct(@RequestBody Product product) {
-
-		LOGGER.info("Chamando o servico salvar produto.");
-		
-	    return  ResponseEntity.status(HttpStatus.OK).body(productService.saveProduct(product));
-	}	
-	
-	@PutMapping(produces = "application/json")
-	@ApiOperation(value = "Set Products")
-	@ApiResponses(value = {
-		    @ApiResponse(responseCode = "200", description = "Comando realizado com sucesso."),
-		    @ApiResponse(responseCode = "400", description = "Ocorreu um erro ao ..."),
-		})
-	public ResponseEntity<List<Product>> setProducts() {
-
-		LOGGER.info("Chamando o servico inserir produtos.");
-		
-	    return  ResponseEntity.status(HttpStatus.OK).body(productService.setProducts());
-	}	
-	
 	@DeleteMapping(produces = "application/json")
 	@ApiOperation(value = "Delete Products")
 	@ApiResponses(value = {
@@ -85,4 +63,18 @@ public class ProductController {
 		
 	    return  ResponseEntity.status(HttpStatus.OK).body("Produtos Deletados");
 	}
+	
+	@PostMapping(consumes = { MediaType.APPLICATION_JSON_VALUE,MediaType.MULTIPART_FORM_DATA_VALUE }, produces = MediaType.APPLICATION_JSON_VALUE)
+	  @ApiOperation(value = "Save Product")
+	  @ApiResponses(value = {
+			    @ApiResponse(responseCode = "200", description = "Comando realizado com sucesso."),
+			    @ApiResponse(responseCode = "400", description = "Ocorreu um erro ao ..."),
+			})
+	  public ResponseEntity<Product> saveProduct(
+				
+	            @RequestPart("file") MultipartFile fileImage) throws Exception {
+
+	    return  ResponseEntity.status(HttpStatus.OK).body(productService.saveProduct(fileImage));
+	   
+	  }
 }

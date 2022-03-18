@@ -16,10 +16,7 @@ import javax.persistence.TemporalType;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 
-import lombok.Data;
-
 @Entity
-@Data
 @Table(name="product")
 public class Product implements Serializable{
 
@@ -55,7 +52,78 @@ public class Product implements Serializable{
     @Lob
 	private byte[] dataFileImage;
 
-	@Type(type = "org.hibernate.type.UUIDCharType")
-    @Column(nullable = false, columnDefinition = "CHAR(36)")
-	private UUID idFornecedor;
+	
+	public UUID getId() {
+		return id;
+	}
+
+	public void setId(UUID id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Date getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
+
+	public Double getPrice() {
+		return price;
+	}
+
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
+	public String getNameFileImage() {
+		return nameFileImage;
+	}
+
+	public void setNameFileImage(String nameFileImage) {
+		this.nameFileImage = nameFileImage;
+	}
+
+	public String getTypeFileImage() {
+		return typeFileImage;
+	}
+
+	public void setTypeFileImage(String typeFileImage) {
+		this.typeFileImage = typeFileImage;
+	}
+
+	public byte[] getDataFileImage() {
+		return dataFileImage;
+	}
+
+	public void setDataFileImage(byte[] dataFileImage) {
+		this.dataFileImage = dataFileImage;
+	}
+
+	
 }

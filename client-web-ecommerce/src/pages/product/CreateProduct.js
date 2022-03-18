@@ -5,16 +5,18 @@ function CreateProduct() {
   
     async function saveProduto(body) {
       try {
-
+        console.log(body)
         fetch(process.env.REACT_APP_API + "/product", apiService.postHeaderMultiPartForm(body))
         .then(res => res.json())
         .then(
           (result) => {
             console.log(result)
             console.log("cuida no Salvar o Produto")
+            alert("Salvou o produto!")
           }
-        )         
-      } catch (error) {
+          ).catch(alert("Erro ao salvar!"))         
+        } catch (error) {
+          alert(error)
           console.log(error)
       }
    }
@@ -104,18 +106,7 @@ function CreateProduct() {
                     accept=".jpg, .jpeg, .png"
                     onChange={selectFile} />
               </label>
-              <div className="progress">
-                  <div
-                    className="progress-bar progress-bar-info progress-bar-striped"
-                    role="progressbar"
-                    aria-valuenow={progress}
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                    style={{ width: progress + "%" }}
-                  >
-                    {progress}%
-                </div>
-              </div>
+              
 
           </div>    
        </div>   

@@ -1,5 +1,5 @@
 package com.ms.product.repository;
-
+//Faz as consultas/operacoes no BD
 import java.util.Optional;
 import java.util.UUID;
 

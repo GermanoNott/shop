@@ -1,5 +1,5 @@
 package com.ms.product.config;
-
+// esse arquivo é destinado para documentacao da api
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
