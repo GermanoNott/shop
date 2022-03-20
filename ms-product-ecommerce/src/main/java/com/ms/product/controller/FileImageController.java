@@ -12,16 +12,25 @@ import com.ms.product.model.Product;
 import com.ms.product.service.ProductService;
 
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 
 @RestController
 @RequestMapping("file")
-@Api(tags="Product Controller")
+@Api(tags="Image Controller")
 public class FileImageController {
 
 
 	@Autowired
 	private ProductService productService;
 	
+		@ApiOperation(value = "Get images")
+		@ApiResponses(value = {
+		    @ApiResponse(responseCode = "200", description = "Comando realizado com sucesso."),
+		    @ApiResponse(responseCode = "400", description = "Ocorreu um erro ao ..."),
+		})
+		
 	  @GetMapping("/{id}")
 	  public ResponseEntity<byte[]> getFile(@PathVariable String id) {
 	    Product product = productService.getProduct(id);

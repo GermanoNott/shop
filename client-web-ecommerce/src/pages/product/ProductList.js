@@ -14,7 +14,7 @@ export default function ProductList() {
         .then(
           (result) => {
             console.log(result)
-            setProducts(result.result)   
+            setProducts(result)   
           }
         )         
       } catch (error) {
@@ -30,7 +30,7 @@ export default function ProductList() {
     <div class="flex flex-col">
         <div class="-my-2 overflow-x-auto">
             <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-5">
-                {products && products.map((product) => (
+                {/* {products && products.map((product) => (
                   <div class="max-w-sm rounded overflow-hidden shadow-lg">
                     <img class="w-full" src={product.image} alt=""/>
                     <div class="px-6 py-4">
@@ -47,20 +47,18 @@ export default function ProductList() {
                         type="checkbox" value=""  id="flexCheckDefault3" />
                     </div>
                   </div>
-                ))}
+                ))} */}
                  {products && products.map((product) => (
                   <div class="max-w-xs mx-4 mb-2 rounded-lg shadow-lg">
                     <img class="w-full" src={product.image} alt=""/>
                     <div class="px-6 py-4">
-                      <div class="flex mb-2">
-                        <span class="px-4 py-0.5 text-sm bg-red-500 rounded-full text-red-50">{product.createDate}</span>
-                      </div>
-                      <h4 class="mb-3 text-xl font-semibold tracking-tight text-green-600 uppercase">{product.name}</h4>
+                    
+                      <h4 class="mb-3 text-xl font-semibold tracking-tight text-blue-400 uppercase">{product.name}</h4>
                       <p class="leading-normal text-gray-700">{product.description}</p>
                     </div>
                     <div class="flex items-center justify-between p-4">
-                      <button class="px-4 py-2 bg-green-600 text-green-50">Order Now</button>
-                      <span class="text-xl text-green-600">R${mascaraMonetaria(product.price)}</span>
+                      <button class="px-4 py-2 bg-blue-400 text-white rounded">Order Now</button>
+                      <span class="text-xl text-blue-500">R${mascaraMonetaria(product.price)}</span>
                     </div>
                   </div>
 

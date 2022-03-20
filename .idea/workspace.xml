@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="28f1eae6-7da5-430d-ab13-372be21d121a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shop.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-web-ecommerce/src/components/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-web-ecommerce/src/components/Nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-web-ecommerce/src/pages/product/CreateProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-web-ecommerce/src/pages/product/CreateProduct.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-web-ecommerce/src/pages/product/ProductList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-web-ecommerce/src/pages/product/ProductList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-product-ecommerce/src/main/java/com/ms/product/controller/FileImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-product-ecommerce/src/main/java/com/ms/product/controller/FileImageController.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="26egjEGVTw0Bzkc7hLw24HoHqaI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="28f1eae6-7da5-430d-ab13-372be21d121a" name="Changes" comment="" />
+      <created>1647789601178</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1647789601178</updated>
+      <workItem from="1647789602554" duration="9000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

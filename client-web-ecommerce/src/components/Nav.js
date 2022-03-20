@@ -19,10 +19,10 @@ const Nav = () => {
                     <ul className="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
                     
                     <li>
-                      <NavLink exact={true} className="navbar-brand" activeClassName='active' to='/'>Products</NavLink>
+                      <NavLink exact={true} className="navbar-brand" activeClassName='active' to='/'>Produtos</NavLink>
                     </li>
                     <li  hidden={isFornecedor==="false"}>
-                      <NavLink exact={true} className="navbar-brand" activeClassName='active' to='/product/create'>New Product</NavLink>
+                      <NavLink exact={true} className="navbar-brand" activeClassName='active' to='/product/create'>Novo Produto</NavLink>
                     </li>
                     
                   </ul>

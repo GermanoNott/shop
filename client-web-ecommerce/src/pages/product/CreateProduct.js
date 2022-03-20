@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import apiService from "../../services/ApiService";
 
 function CreateProduct() {
-  
+ 
     async function saveProduto(body) {
       try {
         console.log(body)
@@ -10,11 +10,11 @@ function CreateProduct() {
         .then(res => res.json())
         .then(
           (result) => {
+            window.location.href="/";
             console.log(result)
-            console.log("cuida no Salvar o Produto")
-            alert("Salvou o produto!")
+            alert("Produto salvo!")
           }
-          ).catch(alert("Erro ao salvar!"))         
+          )       
         } catch (error) {
           alert(error)
           console.log(error)
@@ -86,7 +86,7 @@ function CreateProduct() {
            />
            </div>
        </div>
-       <div class="flex flex-wrap mx-3 mb-1">
+       {/* <div class="flex flex-wrap mx-3 mb-1">
            <div class="w-full px-3">
            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-image">
                Imagem
@@ -97,7 +97,7 @@ function CreateProduct() {
            onChange={(e) => setImage(e.target.value)}
            />
            </div>
-       </div>
+       </div> */}
        <div class="flex flex-wrap mx-3 mb-1">
           <div class="w-full px-3"> 
               <label className="inline-flex items-center justify-center px-7 py-2 text-base font-bold rounded leading-6 text-white bg-gray-200 md:w-auto hover:text-blue-800 focus:outline-none">
