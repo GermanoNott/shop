@@ -24,7 +24,7 @@ A documentacao foi realizada pelo Swagger, a configuracao esta no SwaggerConfig.
 
 Foi realizado o controle de acesso pelos sites externos no CorsConfig.java
 
-*Tentei usar nesse projeto mas não funcionou, depois usei em outro projeto e funcionou
+Ao iniciar o projeto Spring Boot a conexão com BD já deve existir localhost:3306, com o BD bd_product criado. O mesmo se encarrega de criar as tabelas do pacote model.
 
 ## FRONTEND
 Node version v16.14.0
