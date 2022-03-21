@@ -6,7 +6,7 @@ Foi desenvolvido um backend em Java Spring Boot que se conecta com um banco mySQ
 Foi desenvolvido frontend em REACT utilizando fetch para comunicação com os endpoints e estilização em tailwinds.css. 
 
 # BACK END
-openjdk version 16.0.2
+JavaSE 11 - openjdk version 16.0.2
 
 Apache Maven 3.8.5
 
